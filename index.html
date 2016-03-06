@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
 		<title>Dev Days</title>
-		<meta name="description" content="Article Intro Effect" />
+		<meta name="description" content="A Community of WebDev lovers" />
 		<meta name="keywords" content="title, header, effect, scroll, inspiration, web design" />
 		<meta name="author" content="Alexey Leonov" />
 		<link rel="shortcut icon" href="../favicon.ico">
@@ -41,24 +41,23 @@
 
 					<div id="links">
 						<a href="http://vk.com/dev.days" target="blank_">Сообщество</a>
-						<a class="open" href="#2">О Нас</a>
-						<a href="#3">Контакты</a>
+						<a id="opener" href="#2">О Нас</a>
+						<a href="#">Контакты</a>
 					</div>
-					<div id="opener"><a class="inner"><img src="http://icons.iconarchive.com/icons/iconsmind/outline/512/Arrow-Down-icon.png"></a></div>
+
+					<div id="open-icon"><a class="inner"><img src="http://icons.iconarchive.com/icons/iconsmind/outline/512/Arrow-Down-icon.png"></a></div>
 		        </div>
 			</header>
 
 
-			<div class="title">
+			<div id="closer" class="title">
 				<h1>Dev Days</h1>
 				<p class="subline">In Web We Trust</p>
-				<p>by <strong>Henry James</strong> &#8212; Posted in <strong>Inspiration</strong> on <strong>May 21, 2014</strong></p>
 			</div>
-
 
 			<article class="content">
 				<div>
-					<p> Dev Days - это сообщество людей, интересующихся Web-разработкой. Если тебе нравится писать код, любишь цепляющий веб-дизайн или, может, фанатеешь графики, вёрстки, анимации и подобного рода визуализации информации; если у тебя есть идеи, желание делать интересные вещи, в твоих руках есть возможность стать участником сообщества, посвященного одной из самых стремительно развивающихся отраслей IT-сферы - Web-разработке. Мы предлагаем идеи, обсуждаем возможности реализации самых интересных из них, делимся опытом и просто общаемся. </p>
+					<p> <strong>Dev Days</strong> - это сообщество людей, интересующихся Web-разработкой. Если тебе нравится писать код, любишь цепляющий веб-дизайн или, может, фанатеешь графики, вёрстки, анимации и подобного рода визуализации информации; если у тебя есть идеи, желание делать интересные вещи, в твоих руках есть возможность стать участником сообщества, посвященного одной из самых стремительно развивающихся отраслей IT-сферы - Web-разработке. Мы предлагаем идеи, обсуждаем возможности реализации самых интересных из них, делимся опытом и просто общаемся. </p>
 					
 				</div>
 			</article>
@@ -69,11 +68,11 @@
 		$(function(){
 
 			var $container = $('#container');
-			var $containerTitle = $('#container>.title');
-			var $openLink = $( "#links .open" );
-			var $openIcon = $('#opener')
+			var $closer = $('#closer');
+			var $opener = $( "#opener" );
+			var $openIcon = $('#open-icon')
 
-			$openLink.click(function(e){
+			$opener.click(function(e){
 				e.preventDefault();
 				$container.addClass('modify')
 
@@ -83,17 +82,13 @@
 
 			});
 
-			$containerTitle.click(function(){
+			$closer.click(function(){
 				$container.removeClass('modify').css('overflow', 'hidden');
 			});
 
-			$openLink.hover(
-			  function() {
-			  	$openIcon.css('opacity', 1);
-			  },
-			  function() {
-			    $openIcon.css('opacity', 0);
-			  }
+			$opener.hover(
+			  function() { $openIcon.css('opacity', 1); },
+			  function() { $openIcon.css('opacity', 0); }
 			);
 
 		});

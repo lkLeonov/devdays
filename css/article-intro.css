@@ -165,7 +165,7 @@ body { font-family: 'Istok Web', sans-serif; }
     position: relative;
     left: -15px;
 }
-#opener {
+#open-icon {
 /*    height: 10px;
     position: relative;
     top: -10px;
@@ -181,9 +181,13 @@ body { font-family: 'Istok Web', sans-serif; }
     width: 100%;
     opacity: 0;
 }
-#opener img {
+#open-icon img {
     height: 50px;
     
+}
+
+#closer {
+    cursor: pointer;
 }
 
 
