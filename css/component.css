@@ -79,9 +79,7 @@ html, body, .container, .header {
 
 .content > div:not(.title) p {
 	margin: 0 auto 1.5em auto;
-}
 
-.content > div:not(.title) p:first-child {
 	font-size: 1.35em;
 }
 
