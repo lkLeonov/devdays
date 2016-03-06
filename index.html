@@ -7,7 +7,7 @@
 
 		<title>Dev Days</title>
 		<meta name="description" content="A Community of WebDev lovers" />
-		<meta name="keywords" content="title, header, effect, scroll, inspiration, web design" />
+		<meta name="keywords" content="web development, community, moscow, webdev, design, programming" />
 		<meta name="author" content="Alexey Leonov" />
 		<link rel="shortcut icon" href="../favicon.ico">
 
@@ -18,7 +18,7 @@
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 
-		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+		
 	</head>
 
 	<body>
@@ -62,19 +62,21 @@
 				</div>
 			</article>
 		</div><!-- /container -->
-		
+
+		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 		<script>
 
 		$(function(){
 
-			var $container = $('#container');
-			var $closer = $('#closer');
-			var $opener = $( "#opener" );
-			var $openIcon = $('#open-icon')
+			var
+				$container = $('#container'),
+				$closer = $('#closer'),
+				$opener = $( "#opener" ),
+				$openIcon = $('#open-icon');
 
 			$opener.click(function(e){
 				e.preventDefault();
-				$container.addClass('modify')
+				$container.addClass('modify');
 
 				setTimeout(function(){
 					$container.css('overflow', 'initial');

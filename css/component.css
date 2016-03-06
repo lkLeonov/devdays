@@ -6,7 +6,7 @@ html, body, .container, .header {
 
 /* Vertical Centering */
 .header { display: table; }
-.header .title { display: table-cell; vertical-align: middle; top: -8%; }
+.header .title { display: table-cell; vertical-align: middle; top: -7%; }
 
 
 /* Header */
