@@ -1,0 +1,200 @@
+@import url(https://fonts.googleapis.com/css?family=Istok+Web&subset=latin,cyrillic);
+
+@keyframes fade-in {
+    from {opacity: 0.0;}
+    to {opacity: 1;}
+}
+@-webkit-keyframes fade-in {
+    from {opacity: 0.0;}
+    to {opacity: 1;}
+}
+
+* { margin: 0; padding: 0;}
+
+body { font-family: 'Istok Web', sans-serif; }
+
+.container { overflow: hidden; }
+
+.topbody {
+    animation: fade-in 3s;
+    -webkit-animation: fade-in 3s;
+}
+
+#description {
+    margin: 5px auto;
+    /*color: #FFFFFF;*/
+    font-size: 1.2em;
+    max-width: 60%;
+}
+#description a {
+    /*color: rgba(255,255,255,0.6);*/
+}
+
+
+.topbody #top-logo {
+    height: 15em;
+    width: 15em;
+    
+    webkit-box-shadow: -1px 4px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 10px 1px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 10px 1px rgba(0,0,0,0.75);
+
+    z-index: 2;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    margin:0px auto;
+    /*border: solid #FFFFFF 5px;*/
+
+    border: solid rgba(0,0,0,0.75) 5px;
+    padding: 10px;
+}
+
+    #top-logo > p:first-child {
+        margin-top: .9em;
+    }
+    #top-logo > p {
+        text-align: left;
+        font-size: 3.6em;
+        font-family: Arial;
+        font-weight: 700;
+        padding: 0;
+    }
+    #top-logo > p:last-child {
+        color: #D42424;
+    }
+
+.profile-circle {
+    border-radius: 68px;
+}
+.profile-square {
+    border-radius: 5px;
+}
+#profile:hover {
+    opacity: 0.9;
+}
+#title {
+    padding-top: 50px;
+    margin-bottom: 20px;
+    font-family: 'open sans';
+    width: 100%;
+    text-align: center;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-weight: 300;
+    /*color: #FFFFFF;*/
+    line-height: 1.2;
+    text-shadow: 0 0 0.07em #FFFFFF;
+}
+
+#links {
+    border-top: solid rgba(255,255,255, 0.5) 1px;
+    margin: 0 auto;
+    margin-top: 2em;
+    font-family: Arial;
+}
+#links a {
+    text-decoration: none;
+    text-transform: uppercase;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    color: black;
+    border-bottom: 2px solid black;
+    margin: 0 1em;
+        font-family: 'Istok Web', sans-serif;
+}
+
+#links a:nth-child(2) {
+        font-weight: 700;
+}
+
+#links a:hover {
+    opacity: 1;
+    text-shadow: 9px -3px 0.1em rgba(228, 5, 5, 0.55);
+    cursor: pointer;
+}
+
+.text-source, .asker {
+     font-family: 'open sans';
+    font-weight: bold;
+    margin: 10px;
+    font-size: 1.2em;
+}
+.photo-source a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.text img {
+    height: 50px;
+    opacity: .3;
+}
+
+
+.tag-title {
+     text-shadow: 0 0 0.07em #FFFFFF;
+     font-size:4em;
+     margin: 50px auto 0px auto;
+}
+.photo-link {
+    float: right;
+    
+}
+.link-title {
+    background: rgba(0,0,0,0.1);
+    padding: 5px 0px;
+    margin: 0px 0px !important;
+}
+
+
+#top-profile {
+    display:table;
+    margin: 0px auto;
+}
+
+
+#links {
+    position: relative;
+    left: -15px;
+}
+#opener {
+/*    height: 10px;
+    position: relative;
+    top: -10px;
+    z-index: -1;*/
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    opacity: 0;
+}
+#opener img {
+    height: 50px;
+    
+}
+
+
+@media (max-width: 400px) {
+    #links {
+        position: initial;
+    }
+    #links a:first-child {
+        width: 85%;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+}

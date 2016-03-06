@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+		<title>Dev Days</title>
+		<meta name="description" content="Article Intro Effect" />
+		<meta name="keywords" content="title, header, effect, scroll, inspiration, web design" />
+		<meta name="author" content="Alexey Leonov" />
+		<link rel="shortcut icon" href="../favicon.ico">
+
+		<link rel="stylesheet" href="css/component.css" />
+		<link rel="stylesheet" href="css/article-intro.css" />
+
+		<!--[if IE]> 
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	</head>
+
+	<body>
+		<div id="container" class="container intro-effect">
+
+			<header class="header">
+				<div class="bg-img">
+				<!-- 
+					<img src="" alt="Background Image"/>
+				 -->
+				</div>
+
+		        <div class="title topbody" > 
+		            <!-- <div id="title">Some Great Title</div> -->
+		            <div id="top-logo">
+			            <p>Dev</p>
+			            <p>Days</p>
+			            <p>Moscow</p>
+		            </div>
+
+					<div id="links">
+						<a href="http://vk.com/dev.days" target="blank_">Сообщество</a>
+						<a class="open" href="#2">О Нас</a>
+						<a href="#3">Контакты</a>
+					</div>
+					<div id="opener"><a class="inner"><img src="http://icons.iconarchive.com/icons/iconsmind/outline/512/Arrow-Down-icon.png"></a></div>
+		        </div>
+			</header>
+
+
+			<div class="title">
+				<h1>Dev Days</h1>
+				<p class="subline">In Web We Trust</p>
+				<p>by <strong>Henry James</strong> &#8212; Posted in <strong>Inspiration</strong> on <strong>May 21, 2014</strong></p>
+			</div>
+
+
+			<article class="content">
+				<div>
+					<p> Dev Days - это сообщество людей, интересующихся Web-разработкой. Если тебе нравится писать код, любишь цепляющий веб-дизайн или, может, фанатеешь графики, вёрстки, анимации и подобного рода визуализации информации; если у тебя есть идеи, желание делать интересные вещи, в твоих руках есть возможность стать участником сообщества, посвященного одной из самых стремительно развивающихся отраслей IT-сферы - Web-разработке. Мы предлагаем идеи, обсуждаем возможности реализации самых интересных из них, делимся опытом и просто общаемся. </p>
+					
+				</div>
+			</article>
+		</div><!-- /container -->
+		
+		<script>
+
+		$(function(){
+
+			var $container = $('#container');
+			var $containerTitle = $('#container>.title');
+			var $openLink = $( "#links .open" );
+			var $openIcon = $('#opener')
+
+			$openLink.click(function(e){
+				e.preventDefault();
+				$container.addClass('modify')
+
+				setTimeout(function(){
+					$container.css('overflow', 'initial');
+				}, 1500);
+
+			});
+
+			$containerTitle.click(function(){
+				$container.removeClass('modify').css('overflow', 'hidden');
+			});
+
+			$openLink.hover(
+			  function() {
+			  	$openIcon.css('opacity', 1);
+			  },
+			  function() {
+			    $openIcon.css('opacity', 0);
+			  }
+			);
+
+		});
+			
+		</script>
+
+	</body>
+</html>
